@@ -25,21 +25,21 @@ const even = n => !(n % 2);
     // const answer = readlineSync.question('Your answer: ')
 // }
 // вариант ошибки 1
-const oshibka_ti_ebannaya = () => {
+const error = () => {
     console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.`)
     console.log(`Let's try again, ${username}!`)
 }
 // вариант ошибки 2
-const oshibka_ti_ebannaya2 = () => {
+const errorTwo = () => {
     console.log(`'no' is wrong answer ;(. Correct answer was 'yes'.`)
     console.log(`Let's try again, ${username}!`)
 }
 // в процессе
 const proverka = (ans, num) => {
     if(ans === 'yes'){
-       return (even(num) ? true : oshibka_ti_ebannaya() && false)
+       return (even(num) ? true : error() && false)
     }else if(ans === 'no') {
-        return (even(num) ? oshibka_ti_ebannaya2() && false : !false)
+        return (even(num) ? errorTwo() && false : !false)
     }else if(ans !== ('yes' || 'no')) {
         (even(num)) ? console.log(`'${ans}' is wrong answer ;(. Correct answer was 'yes'.`) : console.log(`'${ans}' is wrong answer ;(. Correct answer was 'no'.`)
         return console.log(`Let's try again, ${username}!`)
