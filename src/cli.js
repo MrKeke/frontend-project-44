@@ -43,6 +43,7 @@ const proverka = (ans, num) => {
     }else if(ans !== ('yes' || 'no')) {
         (even(num)) ? console.log(`'${ans}' is wrong answer ;(. Correct answer was 'yes'.`) : console.log(`'${ans}' is wrong answer ;(. Correct answer was 'no'.`)
         return console.log(`Let's try again, ${username}!`)
+        
     }
 }
 
