@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import { username } from '../bin/brain-even.js';
 // Приветствие
 const greeting = () =>{
+console.log('Welcome to the Brain Games!');
 const username = readlineSync.question(`May I have your name? `);
 return username;
 };
