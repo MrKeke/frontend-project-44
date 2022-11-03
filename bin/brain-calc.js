@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import {play} from '../src/index.js';
-import {greeting} from '../src/cli.js'
-const username = greeting()
+import { greeting, fisrtplay } from "../src/cli.js"
+const username = greeting();
+console.log('What is the result of the expression?');
+
 export {username}
-play()

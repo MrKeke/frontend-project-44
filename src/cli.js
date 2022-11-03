@@ -52,7 +52,7 @@ const randmosnum = (n) => {
     return ra[n]
 }
 
-const play = () => {
+const fisrtplay = () => {
     let i = 0
     let c = 0
     
@@ -73,4 +73,4 @@ const play = () => {
     }
 
 }
-export {greeting, randomizer, question, proverka, randmosnum, play};
+export {greeting, randomizer, proverka, randmosnum, fisrtplay};
