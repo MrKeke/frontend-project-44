@@ -1,11 +1,12 @@
-import readlineSync from 'readline-sync';
-import { username } from '../bin/brain-even.js';
+import {question} from 'readline-sync';
+import {username} from '../bin/brain-even.js';
 // Приветствие
-const greeting = () =>{
-console.log('Welcome to the Brain Games!');
-const username = readlineSync.question(`May I have your name? `);
-return username;
-};
+ const greet = () => {
+    console.log(`Welcome to the Brain Games!`)
+    const userName = question('May I have your name? ');
+    console.log(`Hello, ${userName}!`);
+    return userName
+}
 // генерит рандомные числа
 const randomizer = () => {
     const number = []
@@ -21,12 +22,9 @@ const randomizer = () => {
 //  чек на четность
 const even = n => !(n % 2);
 // вопросник
-// const question = () => {
-    // const answer = readlineSync.question('Your answer: ')
-// }
 // вариант ошибки 1
 const error = () => {
-    console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.`)
+    console.log(`'${ans}' is wrong answer ;(. Correct answer was 'no'.`)
     console.log(`Let's try again, ${username}!`)
 }
 // вариант ошибки 2
@@ -41,8 +39,8 @@ const proverka = (ans, num) => {
     }else if(ans === 'no') {
         return (even(num) ? errorTwo() && false : !false)
     }else if(ans !== ('yes' || 'no')) {
-        (even(num)) ? console.log(`'${ans}' is wrong answer ;(. Correct answer was 'yes'.`) : console.log(`'${ans}' is wrong answer ;(. Correct answer was 'no'.`)
-        return console.log(`Let's try again, ${username}!`)
+        return (even(num)) ? console.log(`'${ans}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${username}!`) : console.log(`'${ans}' is wrong answer ;(. Correct answer was 'no'. \nLet's try again, ${username}!`)
+        //  console.log(`Let's try again, ${username}!`)
         
     }
 }
@@ -61,7 +59,7 @@ const fisrtplay = () => {
         
         
         console.log(`Question: ${nubmuz}`)
-        const anse = readlineSync.question(`Your answer: `)    
+        const anse = question(`Your answer: `)    
         
         c += 1
         i += 1
@@ -71,6 +69,12 @@ const fisrtplay = () => {
     if(i === 3) {
         console.log(`Congratulations, ${username}!`)
     }
-
 }
-export {greeting, randomizer, proverka, randmosnum, fisrtplay};
+
+
+function firsttest() {
+    const array = Array.of(randmosnum())
+    console.log(array)
+}
+firsttest()
+export {greet, randomizer, proverka, randmosnum, fisrtplay};

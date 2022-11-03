@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-import { greeting, fisrtplay } from "../src/cli.js"
-const username = greeting();
+import {greet, fisrtplay}  from "../src/cli.js"
+export const username = greet();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 fisrtplay()
-
-// export {username}
