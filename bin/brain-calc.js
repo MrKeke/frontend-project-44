@@ -23,8 +23,8 @@ const gameRule = `What is the result of the expression?`
  }
 
 const round = () => {
-    const num1 = randomInteger()
-    const num2 = randomInteger()
+    const num1 = randomInteger(1, 30)
+    const num2 = randomInteger(1, 30)
     const symbol = symbols[randomInteger(0, 2)]
     const que = `${num1} ${symbol} ${num2}`
     const answer = calc(num1,num2, symbol)
