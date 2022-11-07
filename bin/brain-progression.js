@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { question } from 'readline-sync';
 import {randomInteger} from  '../src/cli.js';
 import playing from '../src/index.js';
 
